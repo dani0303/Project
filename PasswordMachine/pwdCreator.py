@@ -34,4 +34,4 @@ class Creator:#constructor
 
         new_password = new_str1 + new_str2 + new_str3 + special_char[random_char] + special_char[random_char2]
 
-        return "new password is " + new_password
+        return new_password
