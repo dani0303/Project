@@ -3,6 +3,8 @@ Project Ideas:
 
 (Ideas for income: try getting a gig at upwork or upload one of my projects on fiverr)
 
+Create teacher student app(Done)
+
 PasswordMachine Creates a random password given by what the user likes(Done)
 
 Webscrape instagram to get results of a topic or meme
