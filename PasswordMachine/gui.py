@@ -1,6 +1,8 @@
 import pyfiglet
 from pwdCreator import Creator
+from datetime import datetime
 
+today = datetime.now()
 title = pyfiglet.figlet_format("Welcome to the PasswordEater", font="slant")
 
 print("**************************************************************************************************************************\n")
@@ -11,10 +13,12 @@ print("*************************************************************************
 
 while True:
     try:
-
         p1 = input("Before we make your password what is your name?: ")
-        if type(p1) == int:
-            raise ValueError
+        #the purpose of this recursion is to go through every character that is
+        #inside the string and return an ValueError if it contains a digit
+        for character in p1:
+            if character.isdigit():
+                raise ValueError
 
         p2 = int(input("What year were u born?: "))
         if type(p2) != int:
@@ -25,7 +29,13 @@ while True:
             raise ValueError
 
         pwd = Creator(p1, p2, p3)
-        print(pwd.new_pwd())
+        password = pwd.new_pwd()
+        print("Your new password is: " + password)
+        passwords_file = open("passwords.txt", "a")
+        passwords_file.write(password)
+        passwords_file.write("\n")
+        passwords_file.close()
+        break
 
     except ValueError:
         print("invalid")
