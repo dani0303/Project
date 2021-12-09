@@ -2,6 +2,7 @@
 Project Ideas:
 
 (Ideas for income: try getting a gig at upwork or upload one of my projects on fiverr)
+(Goals: get a gig, upload projects to fiverr, start bug bounty)
 
 Create teacher student app(Done)
 
