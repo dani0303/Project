@@ -30,3 +30,4 @@ Vim Definitions:
 1.	to copy text into clipboard first install vim-gtk then do shift-v and "+y
 2.	to get color them do PaperColor
 
+https://github.com/NLKNguyen/papercolor-theme
