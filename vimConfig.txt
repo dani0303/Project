@@ -1,0 +1,27 @@
+set laststatus=2
+set wrap
+set encoding=utf-8
+syntax on
+set tabstop=4 softtabstop=4
+set smartindent
+set smartcase
+set incsearch
+set listchars=tab:\|\ 
+set list
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-sensible'
+Plug 'preservim/nerdtree'
+Plug 'arcticicestudio/nord-vim'
+Plug 'Mofiqul/dracula.nvim'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'rktjmp/lush.nvim'
+Plug 'vim-scripts/AutoComplPop'
+Plug 'wadackel/vim-dogrun'
+Plug 'git@gitlab.com:yorickpeterse/happy_hacking.vim.git'
+Plug 'NLKNguyen/papercolor-theme'
+
+call plug#end()
+
+set background=dark
+colorscheme PaperColor
+
