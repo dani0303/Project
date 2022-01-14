@@ -16,3 +16,5 @@ A program that can scrape data from zillow and put them on a google spreadsheet
 Create an app to make a todo list from the terminal to a cloud
 
 Create a terminal application to run a DOS attack on a FreeBSD server running SMTP
+
+Create program to grab a picture on line and turn it into ascii art
