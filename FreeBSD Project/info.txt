@@ -5,3 +5,5 @@ SMTP Password:BHF/8H3qAmbWbxrwekAmCup/zJFKedIlp0bICi4HQyT+
 USEFUL links:
 https://console.aws.amazon.com/iamv2/home#/users
 https://www.cyberciti.biz/faq/freebsd-configure-aws-ses-with-postfix-mta/
+
+To access ssh use 2key.pem
