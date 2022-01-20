@@ -14,3 +14,5 @@ https://www.hackingarticles.in/smtp-pentest-lab-setup-ubuntu/
 cloudfare login:
 email: drodspeed3@gmail.com
 password: El0030~%
+
+domain: smtp.tk
