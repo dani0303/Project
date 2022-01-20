@@ -10,3 +10,7 @@ To access ssh use 2key.pem
 
 https://www.linode.com/docs/guides/postfix-smtp-debian7/?__cf_chl_captcha_tk__=q104A0rqDgY4AAvKNpjkGGrH0.zjsUg_ixWLtOQ6ZK4-1642611468-0-gaNycGzNCKU
 https://www.hackingarticles.in/smtp-pentest-lab-setup-ubuntu/
+
+cloudfare login:
+email: drodspeed3@gmail.com
+password: El0030~%
