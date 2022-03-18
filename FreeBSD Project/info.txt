@@ -1,18 +1,3 @@
-AMAZON SES:
-SMTP Username:AKIARLU65WDX3GCJUV6M
-SMTP Password:BHF/8H3qAmbWbxrwekAmCup/zJFKedIlp0bICi4HQyT+
-
-USEFUL links:
-https://console.aws.amazon.com/iamv2/home#/users
-https://www.cyberciti.biz/faq/freebsd-configure-aws-ses-with-postfix-mta/
-
-To access ssh use 2key.pem
-
-https://www.linode.com/docs/guides/postfix-smtp-debian7/?__cf_chl_captcha_tk__=q104A0rqDgY4AAvKNpjkGGrH0.zjsUg_ixWLtOQ6ZK4-1642611468-0-gaNycGzNCKU
-https://www.hackingarticles.in/smtp-pentest-lab-setup-ubuntu/
-
-cloudfare login:
-email: drodspeed3@gmail.com
-password: El0030~%
-
-domain: smtp.tk
+1. To run the app do sudo service apache2 start
+2. Use ec2-public ip to access page
+3. To monitor hardware usage use nmon cpu longterm
