@@ -1,3 +1,0 @@
-1. To run the app do sudo service apache2 start
-2. Use ec2-public ip to access page
-3. To monitor hardware usage use nmon cpu longterm
