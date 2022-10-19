@@ -1,0 +1,33 @@
+Number of times a person's name is repeated:
+=====================================================
+Abigail.M - 8
+Patricia.I - 9
+Ashely.H - 9
+Heather.N - 7
+Justin.H - 7
+Jacqueline.J - 7 !
+Gerald.U - 8 !
+Vincent.W - 1
+John.A - 6
+Theresa.T - 6
+Elizabeth.F - 5
+Donna.L - 9
+Megan.A - 8
+Virginia.J - 5
+Danielle.F - 4
+Diana.Z - 10
+James.A - 8
+Benjamin.D - 6
+Martha.A - 7
+Thomas.M - 6
+George.Z - 4
+Anthony.B - 7
+Betty.W - 7
+Danielle.F - 4
+Benjamin.D - 6
+Randy.R - 8
+Brian.U - 1
+Patrick.G - 1
+Norman.I - 2
+Anna.Z - 1
+Hannah.Q - 8
