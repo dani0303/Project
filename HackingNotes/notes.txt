@@ -60,3 +60,8 @@ smbclient //IP/User
 ________________________________________________________________________________
 -HOW TO BRUTE FORCE DIRECTORIES
 gobuster dir -u URL -w WORDLIST LOCATION -x TYPE OF EXTENSION
+
+________________________________________________________________________________
+-Login page SQL injection
+1. first intercept request in the login page using burp (If using HTTPS be sure to download and import certificate in browser before intercepting)
+2. Copy the header request and save it to a file
