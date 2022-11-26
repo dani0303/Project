@@ -60,6 +60,9 @@ smbclient //IP/User
 ________________________________________________________________________________
 -HOW TO BRUTE FORCE DIRECTORIES
 gobuster dir -u URL -w WORDLIST LOCATION -x TYPE OF EXTENSION
+________________________________________________________________________________
+-HOW TO BRUTE FORCE SSH with HYDRA
+hydra -L user.txt -P pass.txt 192.168.29.135 ssh -t 4
 
 ________________________________________________________________________________
 -Login page SQL injection
