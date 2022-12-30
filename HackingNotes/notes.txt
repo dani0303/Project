@@ -68,3 +68,7 @@ ________________________________________________________________________________
 -Login page SQL injection
 1. first intercept request in the login page using burp (If using HTTPS be sure to download and import certificate in browser before intercepting)
 2. Copy the header request and save it to a file
+________________________________________________________________________________
+HOW TO USE SQLMAP FOR SQL INJECTION:
+sqlmap -u URL --forms --dbs --threads 10
+this will test to see if a login page or form is vulnerable to SQL injection
