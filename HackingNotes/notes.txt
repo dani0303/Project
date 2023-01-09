@@ -80,3 +80,7 @@ ________________________________________________________________________________
 HOW TO SCAN WITHOUT BEING DETECTED:
 nmap -A -F IP -v
 ffuf -w WORDLIST -u URL -p SECONDS
+________________________________________________________________________________
+HOW TO ENUMERATE USERS THAT ALREADY EXISTS
+-you can use ffuf to brute force a signup page and look for users that already exist with the same name
+BIG BRAINED
