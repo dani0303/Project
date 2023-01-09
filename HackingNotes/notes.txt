@@ -84,3 +84,4 @@ ________________________________________________________________________________
 HOW TO ENUMERATE USERS THAT ALREADY EXISTS
 -you can use ffuf to brute force a signup page and look for users that already exist with the same name
 BIG BRAINED
+-you can the create a list usernames and brute force ur way in with a password list
