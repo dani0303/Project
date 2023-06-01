@@ -1,0 +1,9 @@
+Redis Notes:
+
+account email: thedhacker03@wearehackerone.com
+password: 19Redis03$
+database name: thedhacker03
+database password: S3KHWXJJ6EikUlJpZp9U5sHcHcIzQikj
+
+api key: A3f0k16o1l488o9t1r5q9d6z9x7d3xz1fbrmwv0ynhprx3lr7c2
+secret key: helloWorld
