@@ -1,0 +1,19 @@
+identifier,asset_type,instruction,eligible_for_bounty,eligible_for_submission,availability_requirement,confidentiality_requirement,integrity_requirement,max_severity,system_tags,created_at,updated_at
+app.redislabs.com,URL,"Instructions to spin up an instance, use H1 email alias in test plan app.redislabs.com
+
+##How to test (app.redislabs.com)
+1. Go to https://app.redislabs.com/#/login
+2. Click “Sign Up” at the bottom of the page
+3. Enter your thedhacker03@wearehackerone email along with other requested info and click “Submit” (you can create multiple trials if necessary)
+4. Find your verification email and click “Activate Account”
+5. Click “Create new subscriptions”
+
+You should now be able to create a Redis deployment in any hosted infrastructure you choose. Once you create a deployment, try to find bugs!
+
+Only the latest supported versions of Redis will be eligible for a bounty.
+",false,true,,,,critical,Imperva Incapsula WAF,2021-10-18 17:24:51 UTC,2022-01-25 23:01:55 UTC
+www.redis.com,URL,"",false,true,,,,critical,Imperva Incapsula WAF,2021-10-18 17:27:51 UTC,2022-01-25 23:01:55 UTC
+www.redislabs.com,URL,"",false,true,,,,critical,Imperva Incapsula WAF,2021-10-18 17:41:26 UTC,2022-01-25 23:01:55 UTC
+api.redislabs.com,URL,"Please see the [API docs](https://docs.redis.com/latest/rc/api/get-started/use-rest-api/) on how to setup and use it. 
+
+Bugs describing missing rate limiting on https://api.redislabs.com are out of scope. The API is rate limited but doesn't return a 429.",false,true,medium,high,high,critical,Amazon Web Services,2021-12-08 15:46:21 UTC,2022-01-25 23:01:55 UTC
